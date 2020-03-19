@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -122,15 +122,23 @@ const SelectorContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default
   align-items: center;
   padding: 1em 0px 1em 0px;
   grid-auto-flow: row;
-  width: 100%;
+  width: auto;
+  color: white;
 `;
 const Title = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.h2`
   text-decoration: underline;
+  font-size: 1.5em;
 `;
 const CountriesSelect = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.select`
   height: 3rem;
   width: 4em;
   font-size: 2rem;
+`;
+const Container = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 const CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.option``;
 /* harmony default export */ __webpack_exports__["default"] = (() => {
@@ -146,33 +154,33 @@ const CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_3___default.
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 35
     },
     __self: undefined
   }, "Loading Countries...");
   if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 36
     },
     __self: undefined
   }, "Error please refresh");
-  return __jsx("div", {
+  return __jsx("container", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx(SelectorContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 40
     },
     __self: undefined
   }, __jsx(Title, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 41
     },
     __self: undefined
   }, "Currently showing: ", selectedCountry), __jsx(CountriesSelect, {
@@ -181,7 +189,7 @@ const CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_3___default.
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 42
     },
     __self: undefined
   }, Object.entries(countries.countries).map(([country, countryCode]) => {
@@ -191,7 +199,7 @@ const CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_3___default.
       selected: selectedCountry === countries.iso3[countryCode],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 49
       },
       __self: undefined
     }, country);
@@ -199,7 +207,7 @@ const CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_3___default.
     url: `https://covid19.mathdro.id/api/countries/${selectedCountry}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 60
     },
     __self: undefined
   }));
@@ -232,7 +240,7 @@ const StatGrid = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
   grid-gap: 1rem;
 `;
 const StatBlock = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div`
-  background: #f2f2f2;
+  background: #e4e4e4;
   font-size: 2em;
   padding: 2rem;
   border-radius: 2rem;
@@ -354,6 +362,12 @@ const GlobalStyle = styled_components__WEBPACK_IMPORTED_MODULE_3__["createGlobal
 html {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+body{
+  background: #00B4DB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
 `;
 const Container = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div`
   margin: 3em;
@@ -362,26 +376,26 @@ function IndexPage() {
   return __jsx(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 23
     },
     __self: this
   }, __jsx(GlobalStyle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 24
     },
     __self: this
   }), __jsx(_components_Stats__WEBPACK_IMPORTED_MODULE_1__["default"], {
     url: "https://covid19.mathdro.id/api",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 25
     },
     __self: this
   }), __jsx(_components_CountrySelector__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 26
     },
     __self: this
   }));
@@ -436,7 +450,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

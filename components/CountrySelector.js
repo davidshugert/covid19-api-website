@@ -10,15 +10,23 @@ const SelectorContainer = styled.div`
   align-items: center;
   padding: 1em 0px 1em 0px;
   grid-auto-flow: row;
-  width: 100%;
+  width: auto;
+  color: white;
 `;
 const Title = styled.h2`
   text-decoration: underline;
+  font-size: 1.5em;
 `;
 const CountriesSelect = styled.select`
   height: 3rem;
   width: 4em;
   font-size: 2rem;
+`;
+const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 const CountriesOptions = styled.option``;
 export default () => {
@@ -28,7 +36,7 @@ export default () => {
   if (error) return <p>Error please refresh</p>;
 
   return (
-    <div>
+    <container>
       <SelectorContainer>
         <Title>Currently showing: {selectedCountry}</Title>
         <CountriesSelect
@@ -52,6 +60,6 @@ export default () => {
       <Stats
         url={`https://covid19.mathdro.id/api/countries/${selectedCountry}`}
       ></Stats>
-    </div>
+    </container>
   );
 };

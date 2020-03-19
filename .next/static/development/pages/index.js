@@ -22,8 +22,18 @@ var _jsxFileName = "C:\\Users\\shuge\\Documents\\Develop\\Learning\\CoronavirusA
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
-function _templateObject4() {
+function _templateObject5() {
   var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])([""]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4() {
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -43,7 +53,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  text-decoration: underline;\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  text-decoration: underline;\n  font-size: 1.5em;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -53,7 +63,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  display: grid;\n  justify-content: center;\n  align-items: center;\n  padding: 1em 0px 1em 0px;\n  grid-auto-flow: row;\n  width: 100%;\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_1__["default"])(["\n  display: grid;\n  justify-content: center;\n  align-items: center;\n  padding: 1em 0px 1em 0px;\n  grid-auto-flow: row;\n  width: auto;\n  color: white;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -70,7 +80,8 @@ var url = "https://covid19.mathdro.id/api/countries";
 var SelectorContainer = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].div(_templateObject());
 var Title = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].h2(_templateObject2());
 var CountriesSelect = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].select(_templateObject3());
-var CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].option(_templateObject4());
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].section(_templateObject4());
+var CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"].option(_templateObject5());
 /* harmony default export */ __webpack_exports__["default"] = (function () {
   var _useStats = Object(_utils_useStats__WEBPACK_IMPORTED_MODULE_3__["default"])(url),
       countries = _useStats.stats,
@@ -84,33 +95,33 @@ var CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"]
   if (loading) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 35
     },
     __self: this
   }, "Loading Countries...");
   if (error) return __jsx("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 36
     },
     __self: this
   }, "Error please refresh");
-  return __jsx("div", {
+  return __jsx("container", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 39
     },
     __self: this
   }, __jsx(SelectorContainer, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 40
     },
     __self: this
   }, __jsx(Title, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 41
     },
     __self: this
   }, "Currently showing: ", selectedCountry), __jsx(CountriesSelect, {
@@ -119,7 +130,7 @@ var CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"]
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 42
     },
     __self: this
   }, Object.entries(countries.countries).map(function (_ref) {
@@ -133,7 +144,7 @@ var CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"]
       selected: selectedCountry === countries.iso3[countryCode],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 41
+        lineNumber: 49
       },
       __self: this
     }, country);
@@ -141,7 +152,7 @@ var CountriesOptions = styled_components__WEBPACK_IMPORTED_MODULE_5__["default"]
     url: "https://covid19.mathdro.id/api/countries/".concat(selectedCountry),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 60
     },
     __self: this
   }));
@@ -169,7 +180,7 @@ var _jsxFileName = "C:\\Users\\shuge\\Documents\\Develop\\Learning\\CoronavirusA
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 function _templateObject2() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #f2f2f2;\n  font-size: 2em;\n  padding: 2rem;\n  border-radius: 2rem;\n  display: grid;\n  align-items: center;\n  justify-items: center;\n  text-align: center;\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #e4e4e4;\n  font-size: 2em;\n  padding: 2rem;\n  border-radius: 2rem;\n  display: grid;\n  align-items: center;\n  justify-items: center;\n  text-align: center;\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -4542,7 +4553,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\nhtml {\n    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;\n}\n"]);
+  var data = Object(_babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\nhtml {\n    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;\n}\nbody{\n  background: #00B4DB;  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n  \n}\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -4560,26 +4571,26 @@ function IndexPage() {
   return __jsx(Container, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 23
     },
     __self: this
   }, __jsx(GlobalStyle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 24
     },
     __self: this
   }), __jsx(_components_Stats__WEBPACK_IMPORTED_MODULE_2__["default"], {
     url: "https://covid19.mathdro.id/api",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 25
     },
     __self: this
   }), __jsx(_components_CountrySelector__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 26
     },
     __self: this
   }));
@@ -4655,7 +4666,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!**********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5Cshuge%5CDocuments%5CDevelop%5CLearning%5CCoronavirusAPI%5Cpages%5Cindex.js ***!
   \**********************************************************************************************************************************************************/
@@ -4678,5 +4689,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

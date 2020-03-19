@@ -7,7 +7,7 @@ const StatGrid = styled.div`
   grid-gap: 1rem;
 `;
 const StatBlock = styled.div`
-  background: #f2f2f2;
+  background: #e4e4e4;
   font-size: 2em;
   padding: 2rem;
   border-radius: 2rem;
