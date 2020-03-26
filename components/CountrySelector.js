@@ -18,17 +18,10 @@ const Title = styled.h2`
   font-size: 1.5em;
 `;
 const CountriesSelect = styled.select`
-  height: 3rem;
-  width: 4em;
-  font-size: 2rem;
+  height: 2rem;
+  width: 10em;
+  font-size: 1rem;
 `;
-const Container = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-const CountriesOptions = styled.option``;
 export default () => {
   const { stats: countries, error, loading } = useStats(url);
   const [selectedCountry, setSelectedCountry] = useState("USA");
@@ -44,15 +37,15 @@ export default () => {
             setSelectedCountry(e.target.value);
           }}
         >
-          {Object.entries(countries.countries).map(([country, countryCode]) => {
+          {countries.countries.map(({ name, iso2 }) => {
             return (
-              <CountriesOptions
-                key={countryCode}
-                value={countries.iso3[countryCode]}
-                selected={selectedCountry === countries.iso3[countryCode]}
+              <option
+                key={iso2}
+                value={iso2}
+                selected={selectedCountry === iso2}
               >
-                {country}
-              </CountriesOptions>
+                {name}
+              </option>
             );
           })}
         </CountriesSelect>
